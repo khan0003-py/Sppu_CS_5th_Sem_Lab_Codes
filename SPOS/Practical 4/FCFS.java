@@ -77,5 +77,4 @@ public class FCFS {
         System.out.println();
         System.out.println("By Arshad Khan : @whoami0003.py");
     }
-
 }
