@@ -74,7 +74,7 @@ public class FCFS {
         System.out.println();
         System.out.println("Average turn around time : " + averageTurnAroundTime);
         System.out.println();
-        System.out.println();
         System.out.println("By Arshad Khan : @whoami0003.py");
+        System.out.println();
     }
 }
