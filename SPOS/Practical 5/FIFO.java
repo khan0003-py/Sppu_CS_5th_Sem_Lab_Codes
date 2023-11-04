@@ -15,6 +15,7 @@ public class FIFO {
 
         Queue<Integer> frameQueue = new ArrayDeque<>(numFrames);
         int pageFaults = 0;
+        int pageHits = 0;
 
         System.out.println("\nPage Replacement Steps:");
 
@@ -32,9 +33,12 @@ public class FIFO {
                 System.out.println("Page " + page + " added to the frame.");
             } else {
                 System.out.println("Page " + page + " already in the frame.");
+                pageHits++;
             }
         }
-        scannet.close();
+        scanner.close();
+        System.out.println();
+        System.out.println("\nTotal page faults: " + pageFaults);
         System.out.println("\nTotal page faults: " + pageFaults);
         System.out.println();
         System.out.println();
