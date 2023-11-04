@@ -39,7 +39,7 @@ public class FIFO {
         scanner.close();
         System.out.println();
         System.out.println("\nTotal page faults: " + pageFaults);
-        System.out.println("\nTotal page faults: " + pageFaults);
+        System.out.println("\nTotal page hits: " + pageHits);
         System.out.println();
         System.out.println();
         System.out.println("By Arshad Khan : @whoami0003.py");
