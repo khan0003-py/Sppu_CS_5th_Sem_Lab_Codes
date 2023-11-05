@@ -82,7 +82,7 @@ public class SJF {
                     + processes[i].burstTime + "\t" + processes[i].completionTime + "\t" + processes[i].turnAroundTime
                     + "\t" + processes[i].waitingTime);
         }
-
+        sc.close();
         System.out.println("Average waiting time : " + averageWaitingTime);
         System.out.println("Average turn around time : " + averageTurnAroundTime);
         System.out.println();

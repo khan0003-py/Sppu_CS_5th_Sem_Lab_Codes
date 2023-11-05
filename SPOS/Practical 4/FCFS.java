@@ -68,7 +68,7 @@ public class FCFS {
         }
         System.out.println();
         System.out.println("-------------------------------------------");
-
+        sc.close();
         System.out.println();
         System.out.println("Average waiting time : " + averageWaitingTime);
         System.out.println();

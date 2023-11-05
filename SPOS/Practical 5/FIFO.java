@@ -10,7 +10,7 @@ public class FIFO {
         int numFrames = scanner.nextInt();
 
         System.out.print("Enter the sequence of page references (e.g., 1 2 3 4 1 2): ");
-        String input = scanner.nextLine();
+        scanner.nextLine();
         String[] inputPages = scanner.nextLine().split(" ");
 
         Queue<Integer> frameQueue = new ArrayDeque<>(numFrames);
