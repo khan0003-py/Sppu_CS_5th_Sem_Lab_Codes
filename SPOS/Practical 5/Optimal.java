@@ -22,13 +22,12 @@ public class Optimal {
         }
 
         for (int i = 0; i < numberOfFrames; i++) {
-            frames[i] = -1; // Initialize frames with -1 to indicate empty slots
+            frames[i] = -1; 
         }
 
         for (int i = 0; i < numberOfPages; i++) {
             pageFound = false;
 
-            // Check if the page is already in memory
             for (int j = 0; j < numberOfFrames; j++) {
                 if (frames[j] == pages[i]) {
                     hits++;
@@ -38,16 +37,13 @@ public class Optimal {
             }
 
             if (!pageFound) {
-                // Page fault occurred
                 if (frameIndex < numberOfFrames) {
-                    // Fill an empty frame
                     frames[frameIndex] = pages[i];
                     frameIndex++;
                 } else {
                     int farthest = 0;
                     int replaceIndex = -1;
 
-                    // Find the page that will be referenced farthest in the future
                     for (int j = 0; j < numberOfFrames; j++) {
                         int nextPageIndex = findNextOccurrence(pages, i, frames[j]);
                         if (nextPageIndex > farthest) {
@@ -55,8 +51,6 @@ public class Optimal {
                             replaceIndex = j;
                         }
                     }
-
-                    // Replace the page that will be referenced farthest in the future
                     frames[replaceIndex] = pages[i];
                 }
 
@@ -77,13 +71,12 @@ public class Optimal {
         System.out.println();
     }
 
-    // Helper function to find the next occurrence of a page
     public static int findNextOccurrence(int pages[], int currentIndex, int page) {
         for (int i = currentIndex; i < pages.length; i++) {
             if (pages[i] == page) {
                 return i;
             }
         }
-        return Integer.MAX_VALUE; // Return a large value if not found in the future
+        return Integer.MAX_VALUE; 
     }
 }
